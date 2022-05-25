@@ -15,7 +15,7 @@
                 this.el.addEventListener('click', function (e) {
 		
                     let zilla = document.querySelector('#zilla-model')
-		    zilla.setAttribute('animation-mixer', "clip: Scene; loop: once;");
+		    zilla.setAttribute('animation-mixer', "clip: Scene; godzilla-walk: once;");
                     this.audio.play();
 			
                   console.log(e)
@@ -38,7 +38,7 @@
                 this.el.addEventListener('touchstart', function (e) {
 		
                     let zilla = document.querySelector('#zilla-model')
-		    zilla.setAttribute('animation-mixer', "clip: Scene; loop: once;");
+		    zilla.setAttribute('animation-mixer', "clip: Scene; godzilla-walk: once;");
                     this.audio.play();
 			console.log(e)
                 }.bind(this));
@@ -64,7 +64,7 @@
     <a-scene renderer="colorManagement: true">
        <a-assets>
         <a-asset-item id="zilla" response-type="arraybuffer" src="./zilla.glb"></a-asset-item>
-        <audio id="godzilla" src="./assets/godzilla.wav"></audio>
+        <audio id="godzilla" src="./assets/godzilla.mp3"></audio>
       </a-assets>
       <a-entity event-listener id="zilla-model"  
         gltf-model="#zilla" 
@@ -76,7 +76,7 @@
       <a-sound src="#godzilla" autoplay="false"></a-sound>
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity cursor="fuse: true; fuseTimeout: 500"></a-entity>
-    </a-scene>
+    </a-godzilla-walk>
 
   </body>
 </html>
